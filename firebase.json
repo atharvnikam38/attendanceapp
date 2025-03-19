@@ -1,0 +1,70 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "attendanceapp-4f43c",
+          "appId": "1:84043750399:android:3effc0d234a6539a88e5ca",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "attendanceapp-4f43c",
+          "configurations": {
+            "android": "1:84043750399:android:3effc0d234a6539a88e5ca",
+            "ios": "1:84043750399:ios:9c5cc5963db3816488e5ca",
+            "macos": "1:84043750399:ios:9c5cc5963db3816488e5ca",
+            "web": "1:84043750399:web:fee61b0bfb74aba788e5ca",
+            "windows": "1:84043750399:web:0b1611d7628c172388e5ca"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    },
+    {
+      "source": "attendanceotp",
+      "codebase": "attendanceotp",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ],
+  "hosting": {
+    "public": "buidl/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
