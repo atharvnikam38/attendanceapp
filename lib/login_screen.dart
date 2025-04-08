@@ -21,9 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   // Mailgun Credentials
   final String mailgunApiKey =
-      "7671103a3ba257f5cc314d7eabab2b13-3d4b3a2a-8bc93940";
+      "44d05a3aa7a46b91790867dc1edcf79c-2b77fbb2-07b2f2c6";
   final String mailgunDomain =
-      "sandboxc4813be81c6d4cb2bdb19283af728a04.mailgun.org";
+      "sandboxc68d16d2f1a24ffebce48ef5266f5770.mailgun.org";
 
   Future<void> _sendOTP(String email, String otp) async {
     String apiUrl = "https://api.mailgun.net/v3/$mailgunDomain/messages";
